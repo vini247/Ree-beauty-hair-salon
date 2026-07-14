@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Timetable</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 6px;
+    
+    }
+    .break {
+      background-color: aquamarine;
+      font-weight: bold;
+      writing-mode: vertical-lr;
+    }
+  </style>
+
+</head>
+<body>
+   <table>
+    <caption><h2>Tesla Kid Timetable</h2></caption>
+    <thead>
+      <tr>
+        <th scope="col">Day</th>
+        <th scope="col">Class</th>
+        <th scope="col">8:00-9:00</th>
+        <th scope="col">9:00-9:40</th>
+        <th scope="col">9:40-10:20</th>
+        <th scope="col">10:20-11:00</th>
+        <th scope="col">11:00-11:40</th>
+        <th scope="col">11:40-12:20</th>
+        <th scope="col">12:20-1:00</th>
+        <th scope="col">1:00-1:40</th>
+        <th scope="col">1:40-2:20</th>
+        <th scope="col">2:20-3:00</th>
+        <th scope="col">3:00-3:40</th>
+        <th scope="col">3:40-4:20</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <th scope="row" rowspan="3">Monday</th>
+          <th>SS2A</th>
+          <td class="break" rowspan="3">Assembly</td>
+          <td colspan="2">Maths</td>
+          <td class="break" rowspan="3">Breakfast</td>
+          <td colspan="2">English</td>
+          <td>F/Maths</td>
+          <td>Physics</td>
+          <td class="break" rowspan="3">Lunch</td>
+          <td colspan="2">French</td>
+          <td>Econs</td>
+        </tr>
+
+        <tr>
+           <th>SS3B</th>
+           
+           <td colspan="2">English</td>
+           <td colspan="2">Maths</td>
+           <td colspan="2">Civic</td>
+           <td>Chemistry</td>
+           <td colspan="2">Physics</td>
+
+
+        </tr>
+        <tr>
+          <th>SS2A</th>
+          <td colspan="2">Chemistry</td>
+          <td colspan="2">Biology</td>
+          <td colspan="2">Econs</td>
+          <td>French</td>
+          <td>Geography</td>
+          <td>Fine Art</td>
+
+        </tr>
+    </tbody>
+   </table>
+</body>
+</html>

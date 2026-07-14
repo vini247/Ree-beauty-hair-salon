@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcome!</h1>
+
+  <label for="nameInput">what is your name?</label>
+  <input type="text" id="nameInput" placeholder="Type your name here...">
+
+  <button id="greetBtn">Say Hello!</button>
+
+  <!-- This empty paragraph will be filled by JavaScript -->
+   <p id="message"></p>
+
+   <!-- Always link JS at the bottom of the body -->
+    <script src="script.js"></script>
+
+
+    <h1>Write a Short Bio</h1>
+    <p>Maximum 100 characters.</p>
+
+    <textarea id="bioInput" rows="4" cols="50" placeholder="Tell us about yourself ..."></textarea>
+
+    <p>
+      Character used: <span id="charcount">0</span>/100
+    </p>
+
+    <p id="warning" style="color: red;"></p>
+
+    <script src="script.js"></script>
+
+
+    <h1>Score Counter</h1>
+
+    <h2 id="scoreDisplay">Score: 0</h2>
+
+
+    <button id="addBtn">  + Add point </button>
+    <button id="subtractBtn"> - Remove Point </button>
+    <button id="resetBtn"> Reset  </button>
+
+     <p id="statusMsg"></p>
+
+     <script src="index2.js"></script>
+
+
+
+
+     <h1>Build Your Profile Card</h1>
+
+     <label>Name:</label>
+     <input type="text" id="nameInput" placeholder=" Your name">
+     <br><br>
+
+      <label>Age:</label>
+      <input type="number" id="ageInput" placeholder=" Your age">
+      <br><br>
+
+      <label>Favorite Color:</label>
+      <input type="color" id="colorInput" placeholder=" Your favorite color">
+      <br><br>
+
+      <label>
+        <input type="checkbox" id="studentCheck">
+        I am a student 
+      </label>
+      <br><br>
+
+      <button id="buildBtn">Build My Profile Card</button>
+
+      <div id="profileCard"></div>
+
+      <script src="index3.js"></script>
+
+
+</body>
+</html>

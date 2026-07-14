@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giftie website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .grid-item {
+      background: #245;
+      color: #fff;
+      padding: 10px;
+      border: 1px solid blue;
+    }
+
+    article {
+      display: grid;
+      grid-template-columns: repeat (4, 1fr);
+      grid-template-rows: repeat(2, 100px 100px);
+      gap: 20px
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns:auto auto auto auto; 
+      /* grid-template-rows:repeat(2, 100px); */
+      gap:10px;
+      
+    }
+
+    .item-3 {
+      background-color: red;
+    }
+
+    .btn {
+      border: none;
+      color: black;
+      border-radius: 8px;
+      width: 180px;
+      font-weight: bold;
+      font-size: 0.875rem;
+      text-align: left;
+      padding: 14px 20px;
+      animation-duration: 3s;
+      animation-name: user;
+      animation-iteration-count: 2;
+      cursor: pointer;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      justify-content: center;
+      margin-left: 200px;
+      animation: user 3s ease-in-out infinite iteration-count direction fill-mode;
+
+      /*transition: background-color 0.3s ease; */
+    }
+
+    .btn:hover {
+      background-color: indigo;
+    }
+
+    /* keyframe */ 
+
+    @keyframes user {
+       0% {
+          transform: scale(1); 
+       } 
+      50% {
+        background-color: yellow;
+      }
+       100% {
+          transform: scale(2); 
+       }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- grid -->
+    <article class="grid-container">
+      <section class="grid-item item-1">1</section>
+      <section class="grid-item">2</section>
+      <section class="grid-item item-3">3</section>
+      <section class="grid-item">4</section>
+      <section class="grid-item">5</section>
+      <section class="grid-item">6</section>
+      <section class="grid-item">7</section>
+      <section class="grid-item">8</section>
+      <section class="grid-item">9</section>
+      <section class="grid-item">10</section>
+
+    </article>
+  </main>
+
+  <button class="btn">Hello</button>  
+</body>
+
+</html>

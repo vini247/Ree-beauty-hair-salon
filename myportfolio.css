@@ -1,0 +1,305 @@
+body {
+  font-family: 'poppins', sans-serif;
+  background-color: #000;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main-header {
+  display: flex;         /* Forces children (logo, nav, button) into a row */
+  align-items: center;   /* Perfectly centers them vertically against each other */
+  justify-content: space-between; /* Pushes logo to left, button to right, links in middle */
+  padding: 10px 10px;
+  background-color: rgba(0,0,0,0.9); /* Semi-transparent black background */
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 10;
+}
+
+/* This keeps your links together in a group */
+.nav-container {
+  display: flex;
+  gap: 30px; 
+}
+
+.logo {
+  color: #d4af37;        /* Gold color for the M. */
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent; /* Creates space for the underline on hover */
+  transition: border-color 0.3s; /* Smooth transition for the underline */
+}
+.nav-item:hover {
+  border-color: #d4af37; /* Gold underline on hover */
+}
+
+.cv-button
+  {
+    background-color: #d4af37; /* Gold background */
+    color: #000; /* Black text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  
+
+  .hero {
+    min-height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(to right,
+     rgba(0,0,0,0.95) 25%,
+     rgba(0,0,0,0.7) 50%,
+      rgba(0,0,0,0.2) 70%,
+       transparent 100%),
+    url("city-guy.jpg");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff; /* White text */
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    
+  
+  }
+
+  .fake-layer {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 90%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8), transparent; /* Dark overlay */
+  }
+
+  .hero-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 60px;
+    margin-left: 0;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 500px;
+    color: #d4af37; /* Gold color for text */
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    margin-top: 40px;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .greeting {
+    color: #d4af37; /* Gold color */
+    margin-bottom: 5px;
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    
+  }
+
+  .name {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: white;
+    
+  }
+
+  .job-title {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
+
+  .description {
+    font-size: 16px;
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 35px;
+  }
+
+ 
+
+  .hero-btns {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .btn-primary {
+    background-color: #d4af37; /* Gold background */
+    color: #000; /* Black text */
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  .btn-primary:hover {
+    background-color: #c19b2e; /* Slightly darker gold on hover */
+    box-shadow: 0 0 10px rgba(209,175,55,0.4); /* Subtle glow effect on hover */
+  }
+
+  .btn-secondary{
+    color: white; /* Black text */
+    border: 1px solid #555; /* Gold border */
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  .btn-secondary:hover {
+    border-color: #d4af37; /* Slightly darker border on hover */
+  }
+
+
+   /* Social Icons */
+  .social-links {
+  display: flex;
+  gap: 40px; /* Space between the icons */
+  margin-top: 5px; /* Space between the buttons and the icons */
+  color: white;
+  align-items: center;
+  padding-left: auto;
+  width: max-content;
+  position: absolute;
+  top: 70px;
+  
+}
+
+.social-links a {
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+
+}
+
+.social-links a:hover {
+  color: #d4af37; /* Changes to your brand gold on hover */
+  
+}
+
+
+section.about {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 40px;
+  padding-left: 60px;
+  align-items: flex-start;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1e1e1e;
+
+}
+
+.section-label {
+  color: #d4af37; /* Gold color */
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.about-heading {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.more-about {
+ color: white; /* Black text */
+    border: 1px solid #555; /* Gold border */
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 14px;
+    background-color: #1e1e1e;
+    letter-spacing: 0.1rem;
+}
+
+.more-about:hover {
+    border-color: #d4af37; /* Slightly darker border on hover */
+  }
+
+.skill-container {
+  margin-top: 40px;
+  flex: 1;
+  text-align: right;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+
+}
+
+.skill-label {
+  color: #d4af37; /* Gold color */
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+}
+
+.icons img {
+  width: 50px;
+  height: 50px;
+
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding-left: 20px;
+  }
+
+}

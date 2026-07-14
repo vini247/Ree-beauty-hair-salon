@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "Rita's-salon",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

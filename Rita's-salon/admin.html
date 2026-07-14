@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ree Beauty | Admin Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #4A3728;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .login-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .login-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #4A3728;
+            letter-spacing: 0.15em;
+        }
+
+        .login-logo p {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 0.3rem;
+            letter-spacing: 0.05em;
+        }
+
+        .divider {
+            width: 40px;
+            height: 2px;
+            background-color: #8C4F3E;
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #4A3728;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.03em;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #333;
+            outline: none;
+            transition: border-color 0.3s ease;
+            background: #fafafa;
+        }
+
+        .form-group input:focus {
+            border-color: #8C4F3E;
+            background: #fff;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: #8C4F3E;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .login-btn:hover {
+            background-color: #4A3728;
+            transform: translateY(-2px);
+        }
+
+        .login-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .error-msg {
+            background-color: #ffeaea;
+            color: #c0392b;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: none;
+            border-left: 3px solid #c0392b;
+        }
+
+        .error-msg.show {
+            display: block;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-link a {
+            font-size: 0.85rem;
+            color: #8C4F3E;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+        <div class="login-logo">
+            <h1>REE BEAUTY</h1>
+            <div class="divider"></div>
+            <p>Admin Dashboard Login</p>
+        </div>
+
+        <div class="error-msg" id="errorMsg"></div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+
+        <button class="login-btn" id="loginBtn">Login to Dashboard</button>
+
+        <div class="back-link">
+            <a href="index.html">← Back to website</a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAxdbY7en6o7_-67LJX5jzNVFHiZCZT3X0",
+            authDomain: "ree-beauty.firebaseapp.com",
+            projectId: "ree-beauty",
+            storageBucket: "ree-beauty.firebasestorage.app",
+            messagingSenderId: "966011104681",
+            appId: "1:966011104681:web:ad708786797376ec5fe8b8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const loginBtn = document.getElementById('loginBtn');
+        const errorMsg = document.getElementById('errorMsg');
+
+        loginBtn.addEventListener('click', async () => {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Clear previous errors
+            errorMsg.classList.remove('show');
+
+            if (!email || !password) {
+                errorMsg.textContent = 'Please enter both email and password.';
+                errorMsg.classList.add('show');
+                return;
+            }
+
+            // Loading state
+            loginBtn.textContent = 'Logging in...';
+            loginBtn.disabled = true;
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                // Success — redirect to dashboard
+                window.location.href = 'dashboard.html';
+            } catch (error) {
+                loginBtn.textContent = 'Login to Dashboard';
+                loginBtn.disabled = false;
+
+                // Show friendly error messages
+                if (error.code === 'auth/invalid-credential' || error.code === 'auth/wrong-password') {
+                    errorMsg.textContent = 'Incorrect email or password. Please try again.';
+                } else if (error.code === 'auth/user-not-found') {
+                    errorMsg.textContent = 'No admin account found with this email.';
+                } else if (error.code === 'auth/too-many-requests') {
+                    errorMsg.textContent = 'Too many failed attempts. Please try again later.';
+                } else {
+                    errorMsg.textContent = 'Login failed. Please check your connection and try again.';
+                }
+                errorMsg.classList.add('show');
+            }
+        });
+
+        // Allow pressing Enter to login
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') loginBtn.click();
+        });
+    </script>
+
+</body>
+</html>

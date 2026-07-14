@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rita | Luxury Hair Salon</title>
+
+    <link rel="icon" href="favicon.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon.io/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.io/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="rita.css">
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">REE BEAUTY</div>
+
+        <nav class="nav-container">
+            <a href="#home" class="nav-item active">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#services" class="nav-item">Services</a>
+            <a href="#Gallery" class="nav-item">Gallery</a>
+            <a href="#Pricing" class="nav-item">Pricing</a>
+            <a href="#Testimonials" class="nav-item">Testimonials</a>
+            <a href="#Contact" class="nav-item">Contact</a>
+        </nav>
+      <button class="book-button" onclick="openBookingModal()">
+    <span>Book Your Appointment</span>
+    <span class="arrow-circle">&rarr;</span>
+</button>
+    </header>
+
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <!-- Your main H1 heading -->
+           <h1 class="slide-left">Luxury Hair Salon For <br> Elegant Styling</h1>
+
+          <p class="slide-left delay-1">
+               Experience the art of luxury hair care, where every strand is crafted 
+               with precision and passion. <br> From bespoke styling and premium treatments 
+               to our exclusive collection of handcrafted wigs, <br> we deliver beauty 
+               solutions tailored to you. Step into ReeBeauty — where elegance meets <br>
+               expertise, and every visit leaves you feeling effortlessly radiant.
+           </p>
+
+            <!-- A call to action button if needed, or you can jump straight to imagery -->
+           <a href="#services" class="hero-btn slide-left delay-2">
+    <span>Explore Our Services</span>
+    <span class="call-circle">&#128488;</span>
+   </a>
+        </div>
+
+        <div class="luxury-wrapper">
+            <img src="https://i.postimg.cc/HnTbwY6Z/ritaimg-removebg-preview.png" alt="Luxury Hair Salon" class="hero-img">
+        </div>
+    </section>
+
+
+    <section class="about-section" id="about">
+        <!-- Left Side: Overlapping Images -->
+        <div class="image-container">
+            <div class="img-wrapper img-left-top">
+                <img src="https://i.postimg.cc/505hRyp9/Whats-App-Image-2026-06-25-at-10-27-45-(1).jpg" alt="Hair Style 1">
+            </div>
+            <div class="img-wrapper img-left-bottom">
+                <img src="https://i.postimg.cc/YSdgfzBF/Whats-App-Image-2026-06-25-at-10-27-45-(2).jpg" alt="Hair Style 2">
+            </div>
+            <div class="img-wrapper img-right">
+                <img src="https://i.postimg.cc/CxNcZ2JP/Whats-App-Image-2026-06-25-at-10-27-45-(3).jpg" alt="Hair Style 3">
+            </div>
+        </div>
+
+          <!-- Right Side: Text Content -->
+        <div class="content-container">
+            <span class="philosophy-tag">OUR PHILOSOPHY</span>
+            <h2>Blending Creativity<br>With Expertise</h2>
+
+            <p>
+                At Ree Beauty, we believe hair is more than just style — it's confidence.
+                 Our salon specializes in female hair artistry, offering everything from high-quality
+                  wigs and bold color to complete transformations. We combine creativity and precision 
+                  to ensure every woman leaves feeling her absolute best.
+            </p>
+
+            <a href="#" class="reserve-btn">
+                Reserve Your Spot
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <h2 class="services-title">Our Premium Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                   <h3>Wig Making</h3>
+                   <p>Custom wigs crafted from scratch to perfectly match your desired length, texture, and style — made uniquely for you.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Revamping</h3>
+                    <p>Breathe new life into your old wigs and hair pieces — we restore, refresh and revive them back to their full glory.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Customization</h3>
+                    <p>Your hair, your way. We craft personalized styles that match your personality, lifestyle, and vision perfectly.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Luxury Hair Vendor</h3>
+                    <p>Shop premium, handpicked hair extensions and wigs crafted for volume, length, and effortless elegance.</p>
+                </div>
+                <div class="service-card">
+                <h3>Ventilation</h3>
+                    <p>Breathable, lightweight wig construction designed for all-day comfort — so you look flawless without sacrificing ease.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Hair Styling</h3>
+                    <p>From sleek and polished to bold and glamorous — our skilled stylists create stunning looks that turn heads and boost your confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- GALLERY SECTION -->
+<section class="gallery-section" id="Gallery">
+    <div class="gallery-intro">
+        <span class="gallery-tag">GALLERY</span>
+        <h2>Our Work Speaks<br>For Itself</h2>
+        <p>Every look we create tells a story — browse our latest transformations and let our work inspire yours.</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <video class="gallery-video" autoplay muted loop playsinline controls controlsList="nodownload nofullscreen" preload="none">
+                <source src="https://ik.imagekit.io/s1orzibli/Rita%20Gallery%20hair%20added%20sound.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <p>Your browser doesn't support this video</p>
+            </video>
+            <div class="gallery-overlay">
+                <span>Wig Installation</span>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <video class="gallery-video" autoplay muted loop playsinline controls controlsList="nodownload nofullscreen" preload="none">
+                <source src="https://ik.imagekit.io/ulitf85fn/hair%20styling%20rita.MOV" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <p>Your browser doesn't support this video</p>
+
+            </video>
+            <div class="gallery-overlay">
+                <span>Hair Styling</span>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <video class="gallery-video" autoplay muted loop playsinline controls controlsList="nodownload nofullscreen" preload="none">
+                <source src="https://ik.imagekit.io/ulitf85fn/Revamping%20wig.MOV" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <p>Your browser doesn't support this video</p>
+            </video>
+            <div class="gallery-overlay">
+                <span>Revamping</span>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <video class="gallery-video" autoplay muted loop playsinline controls controlsList="nodownload nofullscreen" preload="none">
+                <source src="https://ik.imagekit.io/ulitf85fn/cus%20wig.MOV" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <p>Your browser doesn't support this video</p>
+            </video>
+            <div class="gallery-overlay">
+                <span>Customization</span>
+            </div>
+        </div>
+        <div class="gallery-card">
+            <video class="gallery-video" autoplay muted loop playsinline controls controlsList="nodownload nofullscreen" preload="none">
+                <source src="https://ik.imagekit.io/ulitf85fn/wigging.MOV" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <p>Your browser doesn't support this video</p>
+            </video>
+            <div class="gallery-overlay">
+                <span>Wig Making</span>
+            </div>
+        </div>
+        <div class="gallery-card">
+           <video class="gallery-video" autoplay muted loop playsinline controls controlsList="nodownload nofullscreen" preload="none">
+                <source src="https://ik.imagekit.io/ulitf85fn/wigging.MOV" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <p>Your browser doesn't support this video</p>
+            </video>
+            <div class="gallery-overlay">
+                <span>Ventilation</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- PRICING SECTION -->
+ <!-- PRICING SECTION -->
+<section class="pricing-section" id="Pricing">
+    <div class="pricing-intro">
+        <span class="pricing-tag">PRICING</span>
+        <h2>Transparent Pricing,<br>Luxury Results</h2>
+        <p>Quality you can see, prices you can trust — every service crafted with precision and care.</p>
+    </div>
+
+    <div class="pricing-grid" id="pricingGrid">
+    <div class="pricing-card">
+        <h3>Basic</h3>
+        <ul id="basicPrices">
+            <li><span>Loading...</span></li>
+        </ul>
+        <a href="https://wa.me/2347069498434" class="pricing-btn">Book Now</a>
+    </div>
+
+    <div class="pricing-card popular">
+        <span class="popular-tag">Most Popular</span>
+        <h3>Standard</h3>
+        <ul id="standardPrices">
+            <li><span>Loading...</span></li>
+        </ul>
+        <a href="https://wa.me/2347069498434" class="pricing-btn popular-btn">Book Now</a>
+    </div>
+
+    <div class="pricing-card">
+        <h3>Premium</h3>
+        <ul id="premiumPrices">
+            <li><span>Loading...</span></li>
+        </ul>
+        <a href="https://wa.me/2347069498434" class="pricing-btn">Book Now</a>
+    </div>
+</div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section" id="Testimonials">
+    <div class="testimonials-intro">
+        <span class="testimonials-tag">TESTIMONIALS</span>
+        <h2>What Our Clients Say</h2>
+        <p>Real experiences from real women — see why Ree Beauty is the go-to luxury salon.</p>
+    </div>
+
+   <div class="testimonials-grid" id="testimonialsGrid">
+    <div class="loading-testimonials" style="color: #aaa; text-align: center; padding: 2rem; grid-column: 1/-1;">
+        Loading testimonials...
+    </div>
+</div>
+
+<!-- REVIEW FORM -->
+<div class="review-form-wrap">
+    <h3>Share Your Experience</h3>
+    <p>Had a great experience? We'd love to hear from you!</p>
+
+    <form class="review-form" id="reviewForm">
+        <div class="review-row">
+            <div class="review-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="review-group">
+                <select name="service" required>
+                    <option value="" disabled selected>Service Received</option>
+                    <option value="Wig Installation">Wig Installation</option>
+                    <option value="Hair Styling">Hair Styling</option>
+                    <option value="Revamping">Revamping</option>
+                    <option value="Customization">Customization</option>
+                    <option value="Wig Making">Wig Making</option>
+                    <option value="Ventilation">Ventilation</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="review-group">
+            <textarea name="review" placeholder="Write your review..." required></textarea>
+        </div>
+
+        <div class="review-stars-group">
+            <p>Rate your experience:</p>
+            <div class="star-rating">
+                <input type="radio" name="stars" value="5" id="star5"><label for="star5">⭐</label>
+                <input type="radio" name="stars" value="4" id="star4"><label for="star4">⭐</label>
+                <input type="radio" name="stars" value="3" id="star3"><label for="star3">⭐</label>
+                <input type="radio" name="stars" value="2" id="star2"><label for="star2">⭐</label>
+                <input type="radio" name="stars" value="1" id="star1"><label for="star1">⭐</label>
+            </div>
+        </div>
+
+        <button type="submit" class="review-submit" id="reviewSubmit">
+            Submit Review →
+        </button>
+        <div class="review-msg" id="reviewMsg"></div>
+    </form>
+</div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="Contact">
+    <div class="contact-intro">
+        <span class="contact-tag">CONTACT</span>
+        <h2>Get In Touch With Us</h2>
+        <p>Ready to book your next appointment or have a question? Reach out to us and we'll get back to you as soon as possible.</p>
+    </div>
+
+    <div class="contact-grid">
+        <!-- Left Column — Contact Info -->
+        <div class="contact-info">
+            <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                    <h4>Location</h4>
+                    <p>Delta, Asaba, Nigeria</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+234 706 949 8434</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📧</span>
+                <div>
+                    <h4>Email</h4>
+                    <p>Slimrietta@gmail.com</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🕐</span>
+                <div>
+                    <h4>Working Hours</h4>
+                    <p>Monday – Saturday, 9am – 7pm</p>
+                </div>
+            </div>
+
+            <div class="contact-socials">
+                <a href="https://wa.me/2347069498434" class="social-btn">WhatsApp</a>
+                <a href="#" class="social-btn">Instagram</a>
+                <a href="#" class="social-btn">TikTok</a>
+            </div>
+        </div>
+
+        <!-- Right Column — Contact Form -->
+        <form class="contact-form" action="https://formspree.io/f/xzdlgqzb" method="POST">
+            <div class="form-group">
+                <input type="text" name="Full Name" placeholder="Full Name" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="Email" placeholder="Email Address" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="Phone Number" placeholder="Phone Number" class="form-input">
+            </div>
+            <div class="form-group">
+                <select name="Service" class="form-input form-select" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="Wig Installation">Wig Installation</option>
+                    <option value="Hair Styling">Hair Styling</option>
+                    <option value="Revamping">Revamping</option>
+                    <option value="Customization">Customization</option>
+                    <option value="Wig Making">Wig Making</option>
+                    <option value="Ventilation">Ventilation</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea name="Message" class="form-input form-textarea" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="contact-btn">Send Message →</button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ree Beauty. All rights reserved.</p>
+        </div>
+    </footer>
+
+     <!-- BOOKING MODAL -->
+<div class="booking-overlay" id="bookingOverlay"></div>
+
+<div class="booking-modal" id="bookingModal">
+    <button class="booking-close" id="bookingClose">✕</button>
+    
+    <div class="booking-header">
+        <h2>Book Your Appointment</h2>
+        <p>Fill in your details and we'll confirm shortly via WhatsApp</p>
+    </div>
+
+    <form class="booking-form" id="bookingForm">
+        <div class="booking-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="booking-group">
+            <label>Phone Number</label>
+            <input type="tel" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="booking-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="booking-group">
+            <label>Select Service</label>
+            <select name="service" required>
+                <option value="" disabled selected>Choose a service</option>
+                <option value="Wig Installation">Wig Installation</option>
+                <option value="Hair Styling">Hair Styling</option>
+                <option value="Revamping">Revamping</option>
+                <option value="Customization">Customization</option>
+                <option value="Wig Making">Wig Making</option>
+                <option value="Ventilation">Ventilation</option>
+            </select>
+        </div>
+        <div class="booking-row">
+            <div class="booking-group">
+                <label>Preferred Date</label>
+                <input type="date" name="date" required>
+            </div>
+            <div class="booking-group">
+                <label>Preferred Time</label>
+                <input type="time" name="time" required>
+            </div>
+        </div>
+        <div class="booking-group">
+            <label>Additional Notes</label>
+            <textarea name="notes" placeholder="Any special requests or notes"></textarea>
+        </div>
+        <button type="submit" class="booking-submit" id="bookingSubmit">
+            Confirm Booking →
+        </button>
+        <div class="booking-msg" id="bookingMsg"></div>
+    </form>
+</div>
+
+    
+    <!-- Firebase -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAxdbY7en6o7_-67LJX5jzNVFHiZCZT3X0",
+        authDomain: "ree-beauty.firebaseapp.com",
+        projectId: "ree-beauty",
+        storageBucket: "ree-beauty.firebasestorage.app",
+        messagingSenderId: "966011104681",
+        appId: "1:966011104681:web:ad708786797376ec5fe8b8"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      window.auth = auth;
+      window.db = db;
+    </script>
+
+    <script src="Rita-salon.js"></script>
+
+
+</body>
+
+</html>
+
+
+
